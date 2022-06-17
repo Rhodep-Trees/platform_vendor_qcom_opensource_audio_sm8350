@@ -3,7 +3,7 @@ ifneq ($(BOARD_OPENSOURCE_DIR), )
   PRIMARY_HAL_PATH := $(BOARD_OPENSOURCE_DIR)/audio-hal/primary-hal/hal
   AUDIO_KERNEL_INC := $(TARGET_OUT_INTERMEDIATES)/$(BOARD_OPENSOURCE_DIR)/audio-kernel/include
 else
-  PRIMARY_HAL_PATH := vendor/qcom/opensource/audio-hal/primary-hal/hal
+  PRIMARY_HAL_PATH := vendor/qcom/opensource/audio/sm8350/hal
   AUDIO_KERNEL_INC := $(TARGET_OUT_INTERMEDIATES)/vendor/qcom/opensource/audio-kernel/include
 endif # BOARD_OPENSOURCE_DIR
 
