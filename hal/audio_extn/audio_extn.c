@@ -6503,7 +6503,7 @@ void audio_extn_synth_set_parameters(struct audio_device *adev,
 #endif
 
 static void* power_policy_lib_handle;
-typedef int (*launch_power_policy_t) ();
+typedef int (*launch_power_policy_t) (power_policy_init_config_t);
 static launch_power_policy_t launch_power_policy;
 
 static void* power_policy_thread_func(void* arg __unused) {
