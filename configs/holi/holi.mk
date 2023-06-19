@@ -124,12 +124,6 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/audio/sm8350/configs/common/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml
 
-#XML Audio configuration files
-ifneq ($(TARGET_USES_AOSP_FOR_AUDIO), true)
-PRODUCT_COPY_FILES += \
-    $(TOPDIR)vendor/qcom/opensource/audio/sm8350/configs/holi/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/audio_policy_configuration.xml
-endif
-
 #TODO: Delete xml's from obsolete paths
 # Audio configuration xml's related to Holi
 QCV_FAMILY_SKUS := holi
