@@ -157,7 +157,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.qc.sdk.audio.fluencetype=none\
 persist.audio.fluence.voicecall=true\
 persist.audio.fluence.voicerec=false\
-persist.audio.fluence.speaker=true
+persist.audio.fluence.speaker=false
 
 ##speaker protection v3 switch and ADSP AFE API version
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -315,6 +315,8 @@ persist.vendor.audio.ha_proxy.enabled=true
 
 #add dynamic feature flags here
 PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.audio.fluence.tmic.enabled=false \
+persist.vendor.audio.dualmic.config=endfire \
 vendor.audio.feature.a2dp_offload.enable=true \
 vendor.audio.feature.afe_proxy.enable=true \
 vendor.audio.feature.anc_headset.enable=false \
