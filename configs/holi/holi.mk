@@ -69,7 +69,7 @@ AUDIO_FEATURE_ENABLED_VBAT_MONITOR := true
 AUDIO_FEATURE_ENABLED_NT_PAUSE_TIMEOUT := true
 AUDIO_FEATURE_ENABLED_ANC_HEADSET := true
 AUDIO_FEATURE_ENABLED_CUSTOMSTEREO := true
-#AUDIO_FEATURE_ENABLED_FLUENCE := true
+AUDIO_FEATURE_ENABLED_FLUENCE := true
 AUDIO_FEATURE_ENABLED_HDMI_EDID := true
 AUDIO_FEATURE_ENABLED_HDMI_PASSTHROUGH := true
 #AUDIO_FEATURE_ENABLED_KEEP_ALIVE := true
@@ -153,11 +153,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.qc.sdk.audio.ssr=false
 
 ##fluencetype can be "fluence" or "fluencepro" or "none"
-#PRODUCT_PROPERTY_OVERRIDES += \
-#ro.qc.sdk.audio.fluencetype=none\
-#persist.audio.fluence.voicecall=true\
-#persist.audio.fluence.voicerec=false\
-#persist.audio.fluence.speaker=false
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.qc.sdk.audio.fluencetype=none\
+persist.audio.fluence.voicecall=true\
+persist.audio.fluence.voicerec=false\
+persist.audio.fluence.speaker=false
 
 ##speaker protection v3 switch and ADSP AFE API version
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -315,6 +315,7 @@ persist.vendor.audio.ha_proxy.enabled=true
 
 #add dynamic feature flags here
 PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.audio.fluence.tmic.enabled=false \
 persist.vendor.audio.dualmic.config=endfire \
 vendor.audio.feature.a2dp_offload.enable=true \
 vendor.audio.feature.afe_proxy.enable=true \
@@ -333,7 +334,7 @@ vendor.audio.feature.ext_hw_plugin.enable=false \
 vendor.audio.feature.external_dsp.enable=false \
 vendor.audio.feature.external_speaker.enable=false \
 vendor.audio.feature.external_speaker_tfa.enable=false \
-#vendor.audio.feature.fluence.enable=true \
+vendor.audio.feature.fluence.enable=true \
 vendor.audio.feature.fm.enable=true \
 vendor.audio.feature.hdmi_edid.enable=true \
 vendor.audio.feature.hdmi_passthrough.enable=true \
